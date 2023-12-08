@@ -1,0 +1,55 @@
+nav {
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(171, 209, 198, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.3px);
+    -webkit-backdrop-filter: blur(0.8px);
+    font-size: 1rem;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: "Dongle", sans-serif;
+}
+
+.logo_beer {
+    fill: var(--navbar-color);
+}
+
+.logo svg {
+    width: 20vh;
+    height: 70px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+    nav {
+        align-items: center;
+        padding: 0;
+    }
+    .logo svg {
+        width: 10vh;
+        height: 10vh;
+    }
+}
+
+.logo a::after {
+    visibility: hidden;
+}

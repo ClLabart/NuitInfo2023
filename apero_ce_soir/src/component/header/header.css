@@ -1,0 +1,96 @@
+#header {
+    height: 545px;
+    border-radius: 0 0 40px 40px;
+    filter: drop-shadow(0 2px 10px #43EA66);
+    position: relative;
+    margin-bottom: 30px;
+    background: rgb(17,170,155);
+    background: -moz-linear-gradient(90deg, rgba(17,170,155,1) 0%, rgba(174,250,186,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(17,170,155,1) 0%, rgba(174,250,186,1) 100%);
+    background: linear-gradient(90deg, rgba(17,170,155,1) 0%, rgba(174,250,186,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#11aa9b",endColorstr="#aefaba",GradientType=1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerCanvas {
+    transform: translateY(-150px);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@media screen and (max-width: 1180px) {
+    #headerCanvas {
+        transform: translateY(0px);
+        min-width: 100vw!important;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #headerCanvas {
+        min-width: 140vw;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #headerCanvas {
+        min-width: 200vw;
+    }
+}
+
+.lights {
+    transform: rotate(5deg);
+    transform-origin: top right;
+    animation: light 5s infinite alternate ease-in-out;
+}
+
+@keyframes light {
+    0% {
+        opacity: 0.7;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(10deg);
+    }
+}
+
+.animated_feuilles {
+    transition : all 1s ease-in-out;
+    will-change: transform;
+}
+
+.plantes_droit {
+    /* transform: translateX(-900px); */
+    transform: translateX(var(--scroll-y));
+}
+
+.plantes_gauche {
+    /* transform: translateX(500px); */
+    transform: translateX(var(--scroll-y));
+}
+
+.feuilles_arriere_gauche {
+    /* transform: translateX(-750px); */
+    transform: translateX(var(--scroll-y));
+}
+
+.feuilles_milieu_gauche {
+    /* transform: translateX(-800px); */
+    transform: translateX(var(--scroll-y));
+}
+
+.feuilles_milieu_droit {
+    /* transform: translateX(600px); */
+    transform: translateX(var(--scroll-y));
+}
+
+.feuilles_avant_gauche {
+    transform: translateX(var(--scroll-y));
+}
+
+.feuilles_avant_droit {
+    transform: translateX(var(--scroll-y));
+}
